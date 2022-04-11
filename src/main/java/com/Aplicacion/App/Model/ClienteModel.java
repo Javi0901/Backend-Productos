@@ -1,6 +1,5 @@
 package com.Aplicacion.App.Model;
 
-import java.util.Date;
 import javax.persistence.*;
 
 @Entity
@@ -64,6 +63,4 @@ public class ClienteModel {
         this.direccion = direccion;
     }
 
-    
-    
 }

@@ -1,4 +1,3 @@
-    
 package com.Aplicacion.App.Controller;
 
 import com.Aplicacion.App.Model.ClienteModel;
@@ -16,30 +15,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
-    
+
     @Autowired
     private ClienteService clienteservice;
-    
+
     @GetMapping
-    public List<ClienteModel> listar(){
+    public List<ClienteModel> listar() {
         return clienteservice.listar();
     }
-    
+
     @PostMapping
-    public ClienteModel insertar(@RequestBody ClienteModel cliente){
+    public ClienteModel insertar(@RequestBody ClienteModel cliente) {
         return clienteservice.insertar(cliente);
     }
-    
+
     @PutMapping
-    public ClienteModel actualizar(@RequestBody ClienteModel cliente){
+    public ClienteModel actualizar(@RequestBody ClienteModel cliente) {
         return clienteservice.actualizar(cliente);
     }
-    
+
     @DeleteMapping
-    public void eliminar(@RequestBody ClienteModel cliente){
+    public void eliminar(@RequestBody ClienteModel cliente) {
         clienteservice.eliminar(cliente);
     }
-    
-    
-    
+
 }

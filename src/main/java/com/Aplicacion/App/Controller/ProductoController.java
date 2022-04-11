@@ -1,4 +1,3 @@
-
 package com.Aplicacion.App.Controller;
 
 import com.Aplicacion.App.Services.ProductoService;
@@ -13,34 +12,31 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("/productos")
 public class ProductoController {
-    
+
     @Autowired
     private ProductoService productoservice;
-    
+
     @GetMapping
-    public List<ProductoModel> listar(){
+    public List<ProductoModel> listar() {
         return productoservice.listar();
     }
-    
+
     @PostMapping
-    public ProductoModel insertar(@RequestBody ProductoModel prod){
+    public ProductoModel insertar(@RequestBody ProductoModel prod) {
         return productoservice.insertar(prod);
     }
-    
+
     @PutMapping
-    public ProductoModel actualizar(@RequestBody ProductoModel prod){
+    public ProductoModel actualizar(@RequestBody ProductoModel prod) {
         return productoservice.actualizar(prod);
     }
-    
+
     @DeleteMapping
-    public void eliminar(@RequestBody ProductoModel prod){
+    public void eliminar(@RequestBody ProductoModel prod) {
         productoservice.eliminar(prod);
     }
-    
-    
-    
+
 }

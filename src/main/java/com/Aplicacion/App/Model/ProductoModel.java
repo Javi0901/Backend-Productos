@@ -1,6 +1,5 @@
 package com.Aplicacion.App.Model;
 
-import java.util.Date;
 import javax.persistence.*;
 
 @Entity
@@ -62,6 +61,5 @@ public class ProductoModel {
     public void setMarca(String marca) {
         this.marca = marca;
     }
-            
-    
+
 }

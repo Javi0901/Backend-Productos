@@ -16,7 +16,7 @@ public class CarritoController {
     @Autowired
     private CarritoService carritoservice;
     
-    @GetMapping
+    @GetMapping(value = "/all")
     public List<CarritoModel> listar(){
         return carritoservice.listar();
     }
